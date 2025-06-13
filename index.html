@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./assets/images/favicon-32x32.png"
+    />
+    <link rel="stylesheet" href="style.css" />
+
+    <title>Frontend Mentor | Browser extensions manager UI</title>
+  </head>
+  <body class="light">
+    <!-- Topbar -->
+    <div class="topbar topbarlight">
+      <img class="logo" src="/assets/images/logo.svg" alt="logo" />
+      <div class="themeContainer-light" tabindex="0">
+        <img src="/assets/images/icon-moon.svg" alt="moon" />
+      </div>
+    </div>
+
+    <!-- Filterbar -->
+    <div class="filterbar">
+      <h1 class="heading heading-light">Extensions List</h1>
+      <div class="filters">
+        <div class="filter filter-light active" id="all" tabindex="0">All</div>
+        <div class="filter filter-light" id="active" tabindex="0">Active</div>
+        <div class="filter filter-light" id="inactive" tabindex="0">
+          Inactive
+        </div>
+      </div>
+    </div>
+
+    <!-- Extensions Container -->
+    <div class="extensionsContainer">
+      <!-- Extension - 1 -->
+      <div class="item item1 item-light" id="toggle-item1">
+        <div class="top">
+          <img
+            class="icon"
+            style="user-select: none"
+            src="assets/images/logo-devlens.svg"
+            alt="devlens"
+          />
+          <div class="info info-light">
+            <h1>DevLens</h1>
+            <p>
+              Quickly inspect page layouts and visualize element boundaries.
+            </p>
+          </div>
+        </div>
+        <div class="bottom">
+          <div class="removebtn remove-light" id="remove-item1" tabindex="0">Remove</div>
+          <div class="switch toggleSwitch" id="toggle-item1" tabindex="0">
+            <div class="slider"></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Extension - 2 -->
+      <div class="item item2 item-light" id="toggle-item2">
+        <div class="top">
+          <img
+            class="icon"
+            style="user-select: none"
+            src="assets/images/logo-style-spy.svg"
+            alt="logo-style-spy"
+          />
+          <div class="info info-light">
+            <h1>StyleSpy</h1>
+            <p>Instantly analyze and copy CSS from any webpage element.</p>
+          </div>
+        </div>
+        <div class="bottom">
+          <div class="removebtn remove-light" id="remove-item2" tabindex="0">Remove</div>
+          <div class="switch toggleSwitch" id="toggle-item2" tabindex="0">
+            <div class="slider"></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Extension - 3 -->
+      <div class="item item3 item-light" id="toggle-item3">
+        <div class="top">
+          <img
+            class="icon"
+            style="user-select: none"
+            src="assets/images/logo-speed-boost.svg"
+            alt="logo-speed-boost"
+          />
+          <div class="info info-light">
+            <h1>SpeedBoost</h1>
+            <p>Optimizes browser resource usage to accelerate page loading.</p>
+          </div>
+        </div>
+        <div class="bottom">
+          <div class="removebtn remove-light" id="remove-item3" tabindex="0">Remove</div>
+          <div class="switch toggleSwitch" id="toggle-item3" tabindex="0">
+            <div class="slider"></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Extension - 4 -->
+      <div class="item item4 item-light" id="toggle-item4">
+        <div class="top">
+          <img
+            class="icon"
+            style="user-select: none"
+            src="assets/images/logo-json-wizard.svg"
+            alt="logo-json-wizard"
+          />
+          <div class="info info-light">
+            <h1>JSONWizard</h1>
+            <p>Formats, validates, and prettifies JSON responses in-browser.</p>
+          </div>
+        </div>
+        <div class="bottom">
+          <div class="removebtn remove-light" id="remove-item4" tabindex="0">Remove</div>
+          <div class="switch toggleSwitch" id="toggle-item4" tabindex="0">
+            <div class="slider"></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Extension - 5 -->
+      <div class="item item5 item-light" id="toggle-item5">
+        <div class="top">
+          <img
+            class="icon"
+            style="user-select: none"
+            src="assets/images/logo-tab-master-pro.svg"
+            alt="logo-tab-master-pro"
+          />
+          <div class="info info-light">
+            <h1>TabMaster Pro</h1>
+            <p>Organizes browser tabs into groups and sessions.</p>
+          </div>
+        </div>
+        <div class="bottom">
+          <div class="removebtn remove-light" id="remove-item5" tabindex="0">Remove</div>
+          <div class="switch toggleSwitch" id="toggle-item5" tabindex="0">
+            <div class="slider"></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Extension - 6 -->
+      <div class="item item6 item-light" id="toggle-item6">
+        <div class="top">
+          <img
+            class="icon"
+            style="user-select: none"
+            src="assets/images/logo-viewport-buddy.svg"
+            alt="logo-viewport-buddy"
+          />
+          <div class="info info-light">
+            <h1>ViewportBuddy</h1>
+            <p>
+              Simulates various screen resolutions directly within the browser.
+            </p>
+          </div>
+        </div>
+        <div class="bottom">
+          <div class="removebtn remove-light" id="remove-item6" tabindex="0">Remove</div>
+          <div class="switch toggleSwitch" id="toggle-item6" tabindex="0">
+            <div class="slider"></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Extension - 7 -->
+      <div class="item item7 item-light" id="toggle-item7">
+        <div class="top">
+          <img
+            class="icon"
+            style="user-select: none"
+            src="assets/images/logo-markup-notes.svg"
+            alt="logo-markup-notes"
+          />
+          <div class="info info-light">
+            <h1>Markup Notes</h1>
+            <p>
+              Enables annotation and notes directly onto webpages for
+              collaborative debugging.
+            </p>
+          </div>
+        </div>
+        <div class="bottom">
+          <div class="removebtn remove-light" id="remove-item7" tabindex="0">Remove</div>
+          <div class="switch toggleSwitch" id="toggle-item7" tabindex="0">
+            <div class="slider"></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Extension - 8 -->
+      <div class="item item8 item-light" id="toggle-item8">
+        <div class="top">
+          <img
+            class="icon"
+            style="user-select: none"
+            src="assets/images/logo-grid-guides.svg"
+            alt="logo-grid-guides"
+          />
+          <div class="info info-light">
+            <h1>GridGuides</h1>
+            <p>
+              Overlay customizable grids and alignment guides on any webpage.
+            </p>
+          </div>
+        </div>
+        <div class="bottom">
+          <div class="removebtn remove-light" id="remove-item8" tabindex="0">Remove</div>
+          <div class="switch toggleSwitch" id="toggle-item8" tabindex="0">
+            <div class="slider"></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Extension - 9 -->
+      <div class="item item9 item-light" id="toggle-item9">
+        <div class="top">
+          <img
+            class="icon"
+            style="user-select: none"
+            src="assets/images/logo-palette-picker.svg"
+            alt="logo-palette-picker"
+          />
+          <div class="info info-light">
+            <h1>Palette Picker</h1>
+            <p>Instantly extracts color palettes from any webpage.</p>
+          </div>
+        </div>
+        <div class="bottom">
+          <div class="removebtn remove-light" id="remove-item9" tabindex="0">Remove</div>
+          <div class="switch toggleSwitch" id="toggle-item9" tabindex="0">
+            <div class="slider"></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Extension - 10 -->
+      <div class="item item10 item-light" id="toggle-item10">
+        <div class="top">
+          <img
+            class="icon"
+            style="user-select: none"
+            src="assets/images/logo-link-checker.svg"
+            alt="logo-link-checker"
+          />
+          <div class="info info-light">
+            <h1>LinkChecker</h1>
+            <p>Scans and highlights broken links on any page.</p>
+          </div>
+        </div>
+        <div class="bottom">
+          <div class="removebtn remove-light" id="remove-item10" tabindex="0">Remove</div>
+          <div class="switch toggleSwitch" id="toggle-item10" tabindex="0">
+            <div class="slider"></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Extension - 11 -->
+      <div class="item item11 item-light" id="toggle-item11">
+        <div class="top">
+          <img
+            class="icon"
+            style="user-select: none"
+            src="assets/images/logo-dom-snapshot.svg"
+            alt="logo-dom-snapshot"
+          />
+          <div class="info info-light">
+            <h1>DOM Snapshot</h1>
+            <p>Capture and export DOM structures quickly.</p>
+          </div>
+        </div>
+        <div class="bottom">
+          <div class="removebtn remove-light" id="remove-item11" tabindex="0">Remove</div>
+          <div class="switch toggleSwitch" id="toggle-item11" tabindex="0">
+            <div class="slider"></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Extension - 12 -->
+      <div class="item item12 item-light" id="toggle-item12">
+        <div class="top">
+          <img
+            class="icon"
+            style="user-select: none"
+            src="assets/images/logo-console-plus.svg"
+            alt="logo-console-plus"
+          />
+          <div class="info info-light">
+            <h1>ConsolePlus</h1>
+            <p>
+              Enhanced developer console with advanced filtering and logging.
+            </p>
+          </div>
+        </div>
+        <div class="bottom">
+          <div class="removebtn remove-light" id="remove-item12" tabindex="0">Remove</div>
+          <div class="switch toggleSwitch" id="toggle-item12" tabindex="0">
+            <div class="slider"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Script File -->
+    <script type="text/javascript" src="script.js"></script>
+  </body>
+</html>
