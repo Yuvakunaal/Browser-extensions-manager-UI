@@ -1,3 +1,5 @@
+let themelight = localStorage.getItem("themelight") || "light";
+
 window.onload = () => {
   let body = document.querySelector("body");
   let topBar = document.querySelector(".topbar");
@@ -14,6 +16,29 @@ window.onload = () => {
     ".extensionsContainer .item .bottom .removebtn"
   );
 
+  if (themelight === "dark") {
+    body.classList.replace("light", "dark");
+    topBar.classList.replace("topbarlight", "topbardark");
+    logo.setAttribute("src", "assets/images/logo-dark.svg");
+    themeContainer.classList.replace(
+      "themeContainer-light",
+      "themeContainer-dark"
+    );
+    themeElement.setAttribute("src", "assets/images/icon-sun.svg");
+    headingElement.classList.replace("heading-light", "heading-dark");
+    filterBtns.forEach((element) => {
+      element.classList.replace("filter-light", "filter-dark");
+    });
+    items.forEach((element) => {
+      element.classList.replace("item-light", "item-dark");
+    });
+    infos.forEach((element) => {
+      element.classList.replace("info-light", "info-dark");
+    });
+    removeBtns.forEach((element) => {
+      element.classList.replace("remove-light", "remove-dark");
+    });
+  }
 
   let toggleStates = {};
   toggles.forEach((toggle, index) => {
@@ -112,8 +137,6 @@ window.onload = () => {
     });
   });
 
-  // Handling Theme
-  let themelight = "light";
   themeContainer.addEventListener("click", () => {
     if (themelight === "light") {
       body.classList.replace("light", "dark");
@@ -138,6 +161,7 @@ window.onload = () => {
         element.classList.replace("remove-light", "remove-dark");
       });
       themelight = "dark";
+      localStorage.setItem("themelight", "dark");
     } else {
       body.classList.replace("dark", "light");
       topBar.classList.replace("topbardark", "topbarlight");
@@ -161,6 +185,7 @@ window.onload = () => {
         element.classList.replace("remove-dark", "remove-light");
       });
       themelight = "light";
+      localStorage.setItem("themelight", "light");
     }
   });
 };
